@@ -1,4 +1,4 @@
-# GAURUS
+# GAURUS Project
 GNU, Are U Really UrSelf? Re-implementation of GNU Coreutils. Re-implementação do GNU Coreutils.
 
 Y'know, I always thought the GNU Core Utilities were simple and minimalist, until i've read its source code; for a simple program like 'true', it has 80 lines of code, and the majority of it

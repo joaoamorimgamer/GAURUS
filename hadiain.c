@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <string.h>
+#include <unistd.h>
 int main(int argc, char **argv)
 {
 	if(argc == 2)
@@ -9,9 +9,12 @@ int main(int argc, char **argv)
 	
 		if(strcmp(argv[1], "--help") == 0)
 		{
-			printf("%s - what directory am i in\n", argv[0]);
-			printf("Usage: hadiain [NO ARGUMENTS]\n");
-			printf("--help	print this help page and exit\n");
+			printf("%s: %s\n", argv[0], argv[0]);
+			printf("   Print the name of the current working directory.\n");
+			printf("   Options:\n");
+			printf("     --help print this help page and exit\n\n");
+			printf("   Exit Status:\n");
+			printf("   Returns 0 unless the current directory cannot be read.\n");
 			return 0;
 		}
 	}

@@ -18,7 +18,6 @@ int main(int argc, char **argv)
 		{
 			printf("Usage: %s [OPTION]... DIRECTORY...\n", argv[0]);
 			printf("Create the DIRECTORIE(s), if they do not already exist.\n\n");
-			printf("  -p, --parents		creates child directories\n");
 			printf("  -v, --verbose		prints a message for every directory created\n");
 			printf("  --help		print this help page and exit\n");
 			printf("  --version		show information about the version and exit\n");

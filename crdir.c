@@ -8,7 +8,6 @@ int main(int argc, char **argv)
 	int year = 2026;
 	if(argc == 1)
 	{
-		//mkdir(argv[1], 755);
 		printf("%s: missing operand\n", argv[0]);
 		printf("Try '%s --help' for more information.\n", argv[0]);
 		return 1;
@@ -35,12 +34,6 @@ int main(int argc, char **argv)
 			printf("Written by João Pedro Amorim Oliveira.\n");
 			return 0;
 		}
-		/*else if(strcmp(argv[1], "--parents") == 0)
-		{
-
-			return 0;
-		}
-		*/
 	}	
        	if(mkdir(argv[1], 755) != 0)
 	{

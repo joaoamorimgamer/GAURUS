@@ -1,8 +1,8 @@
 CC	:= cc
 PREFIX	:= /usr/
 BINDIR	:= $(PREFIX)/bin
-BINS	:= dog crdir hadiain no real fake 
-CFLAGS	= -march=native -std=c99 -O2 -pipe -Wall -Wextra
+BINS	:= dog hadiain tap crdir no real fake 
+CFLAGS	= -march=native -O2 -pipe -Wall -Wextra
 
 all: $(BINS) 
 
@@ -14,10 +14,10 @@ fake: fake.c
 	$(CC) $(CFLAGS) -o fake fake.c
 hadiain: hadiain.c
 	$(CC) $(CFLAGS) -o hadiain hadiain.c
-dog: dog.c
-	$(CC) $(CFLAGS) -o dog dog.c
 crdir: crdir.c
 	$(CC) $(CFLAGS) -o crdir crdir.c
+tap: tap.c
+	$(CC) $(CFLAGS) -o tap tap.c
 clean:
 	rm -f $(BINS)
 install: all
@@ -25,4 +25,4 @@ install: all
 	install -m 755 $(BINS) $(BINDIR)
 uninstall:
 	cd $(BINDIR) && rm -f $(BINS)
-.PHONY: all no real dog crdir fake hadiain clean install uninstall
+.PHONY: all no real fake tap crdir hadiain clean install uninstall

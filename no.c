@@ -6,29 +6,27 @@ int main(int argc, char *argv[])
 	{
 			printf("%s: [OPTION]... [STRING]\n",argv[0]);
 			printf("Print a string repeatedly until killed.\n\n");
-			printf("--help	print this help page and exit\n");
+			printf("   --help	print this help page and exit\n");
 			return 0;
 	}
-	else if(argc ==	1)
+	if(argc == 1)
 	{
 		while(0==0)
 		{
 			printf("y\n");
 		}
 	}
-	else if(argc == 2)
+	while(1)
 	{
-		while(0==0)
+		for(int i = 1; i < argc; i++)
 		{
-			printf("%s\n", argv[1]);
+			printf("%s", argv[i]);
+			if(i < argc - 1)
+			{
+				printf(" ");
+			}
 		}
-	}
-	else if(argc == 3)
-	{
-		while(0==0)
-		{
-			printf("%s %s\n", argv[1], argv[2]);
-		}
+		printf("\n");
 	}
 	return 0;
 }

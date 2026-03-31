@@ -4,7 +4,7 @@
 #include <errno.h>
 int main(int argc, char **argv)
 {
-	float version = 1.0;
+	float version = 1.1;
 	int year = 2026;
 	if(argc == 1)
 	{
@@ -14,11 +14,11 @@ int main(int argc, char **argv)
 	}
 	else if(argc > 1)
 	{
-		/* useless */
 		if(strcmp(argv[1], "--help") == 0)
 		{
 			printf("Usage: %s [OPTION]... DIRECTORY...\n", argv[0]);
 			printf("Create the DIRECTORIE(s), if they do not already exist.\n\n");
+			printf("  -p, --parents		creates child directories\n");
 			printf("  -v, --verbose		prints a message for every directory created\n");
 			printf("  --help		print this help page and exit\n");
 			printf("  --version		show information about the version and exit\n");
@@ -34,9 +34,8 @@ int main(int argc, char **argv)
 			printf("Written by João Pedro Amorim Oliveira.\n");
 			return 0;
 		}
-		/* end of useless */
 	}	
-       	if(mkdir(argv[1], 0775) != 0)
+       	if(mkdir(argv[1], 755) != 0)
 	{
 		printf("%s: cannot create directory '%s': %s\n", argv[0], argv[1], strerror(errno));
 		return 1;

@@ -1,8 +1,9 @@
 CC	:= cc
-PREFIX	:= /usr/
+PREFIX	:= /usr/local
 BINDIR	:= $(PREFIX)/bin
 BINS	:= dog hadiain tap crdir no say standby real fake 
 CFLAGS	= -march=native -O2 -pipe -Wall -Wextra
+ORIGS	= /usr/bin/cat /usr/bin/false /usr/bin/mkdir /usr/bin/touch /usr/bin/sleep /usr/bin/true /usr/bin/yes /usr/bin/echo /usr/bin/pwd
 
 all: $(BINS) 
 
@@ -29,4 +30,7 @@ install: all
 	install -m 755 $(BINS) $(BINDIR)
 uninstall:
 	cd $(BINDIR) && rm -f $(BINS)
-.PHONY: all no real fake tap crdir standby say hadiain clean install uninstall
+backup: $(ORIGS)
+	mkdir ~/gaurusbackup
+	cp $(ORIGS) ~/gaurusbackup
+.PHONY: all no real fake tap crdir standby say hadiain clean install uninstall backup

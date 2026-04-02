@@ -23,3 +23,17 @@ estou trabalhando nisso, e há MUITO o que trabalhar, mas farei as coisas devaga
 AVISO: Por razões de segurança, NÃO encorajo você a substituir totalmente o GNU Coreutils por este projeto, porque nunca é garantido que ele fornecerá a mesma funcionalidade. Se você substituir inconscientemente todos os programas com o meu, seu sistema PODE quebrar.
 
 Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA. O software é fornecido "como está".
+
+## Installation
+By default, the GAURUS core utilities will be installed to /usr/local/bin. If you want to change that, modify the Makefile with the desired configurations.
+
+To compile and install GAURUS, run the following command as the root user:
+```bash
+# make install
+```
+If you really want to replace the GNU core utilities, make a backup of them by running the following command also as the root user:
+```bash
+# make backup install
+```
+
+And now you can enjoy using normal GNU/Linux commands minimally :)

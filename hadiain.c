@@ -5,8 +5,6 @@
 #include <string.h>
 #define PROGRAM_NAME "hadiain"
 
-#define AUTHORS "João Pedro Amorim Oliveira"
-
 void usage()
 {
   printf("Usage: %s [OPTION]...\n", PROGRAM_NAME);
@@ -21,8 +19,6 @@ int main(int argc, char **argv)
   char *cwd;
   char *lcwd;
   int c;
-  float version = 1.1;
-  int year = 2026;
   struct option longopts[] =
   {
     {"physical", no_argument, NULL, 'P'},
@@ -38,14 +34,6 @@ int main(int argc, char **argv)
     {
       case 'h':
         usage();
-        break;
-      case 'v':
-        printf("%s (GAURUS) %.1lf\n", argv[0], version);
-        printf("Copyright (C) %d %s.\n", year, AUTHORS);
-        printf("License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\n");
-        printf("This is free software: you are free to change and redistribute it.\n");
-        printf("There is NO WARRANTY, to the extent permitted by law.\n\n");
-        printf("Written by %s.\n", AUTHORS);
         break;
       case 'L':
         lcwd = getenv("PWD");

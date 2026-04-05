@@ -34,11 +34,14 @@ int main(int argc, char **argv)
 			printf("Written by João Pedro Amorim Oliveira.\n");
 			return 0;
 		}
-	}	
-       	if(mkdir(argv[1], 755) != 0)
-	{
-		printf("%s: cannot create directory '%s': %s\n", argv[0], argv[1], strerror(errno));
-		return 1;
 	}
+  for(int i = 1; i < argc; i++)
+  {
+    if(mkdir(argv[i], 0755) != 0)
+	  {
+	  	printf("%s: cannot create directory '%s': %s\n", argv[0], argv[i], strerror(errno));
+	  	return 1;
+	  }
+  }
 	return 0;
 }

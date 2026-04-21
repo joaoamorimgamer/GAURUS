@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
-int main(int argc, char **argv)
+
+int 
+main(int argc, char **argv)
 {
 	if(argc == 1)
 	{
@@ -14,7 +16,7 @@ int main(int argc, char **argv)
 		file = fopen(argv[i], "w");
 		if(file == NULL)
 		{
-			printf("%s: %s\n", argv[0], strerror(errno));	
+      fprintf(stderr, "%s: %s\n", argv[0], strerror(errno));
 			return 1;
 		}
 	}

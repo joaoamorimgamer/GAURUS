@@ -1,6 +1,6 @@
 # WARNING
-i will by now start hosting this repository on codeberg because github is non free software that doesnt respect the users freedom. sorry. i also encourage you to host your repositories on codeberg.
-
+i will by now start hosting this repository on codeberg because github is non free software that doesnt respect the users freedom. sorry. i also encourage you to host your own repositories on codeberg.
+https://codeberg.org/joaoamorimgamer/gaurus
 
 # GAURUS Project
 GNU, Are U Really UrSelf? Re-implementation of GNU Coreutils.
